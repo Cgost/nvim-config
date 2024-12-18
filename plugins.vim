@@ -64,6 +64,12 @@ lua << EOF
   -- 例如設置 Python 的 LSP (pylsp)
   lspconfig.pylsp.setup{}
 
+  -- 設置 C 和 C++ 的 LSP (clangd)
+  lspconfig.clangd.setup{}
+
+  -- 配置 rust-analyzer（Rust）
+  lspconfig.rust_analyzer.setup{}
+
   -- 設置其他語言的 LSP
   -- lspconfig.tsserver.setup{} -- 用於 TypeScript/JavaScript
   -- lspconfig.html.setup{}     -- 用於 HTML
