@@ -25,6 +25,22 @@ require('packer').startup(function(use)
 
   -- nvim-autopairs 插件，實現自動補全括號
   use 'windwp/nvim-autopairs'
+
+  -- 安裝 nvim-cmp 插件及其來源
+  use {
+    'hrsh7th/nvim-cmp',               -- 核心補全插件
+    requires = {
+      'hrsh7th/cmp-nvim-lsp',         -- LSP 支援
+      'hrsh7th/cmp-buffer',           -- 緩衝區補全
+      'hrsh7th/cmp-path',             -- 路徑補全
+      'saadparwaiz1/cmp_luasnip',     -- Snippet 補全
+      'L3MON4D3/LuaSnip',             -- Snippet 引擎
+      'hrsh7th/cmp-vsnip',            -- VSnip 支援（可選）
+    }
+  }
+
+  -- nvim-lspconfig 插件
+  use 'neovim/nvim-lspconfig'  -- LSP 支援
   -- 可以在此處添加更多插件...
 end)
 EOF
